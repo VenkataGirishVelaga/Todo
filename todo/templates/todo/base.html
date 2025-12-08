@@ -1,0 +1,15 @@
+<html> 
+    <head>
+        <title>Todo App</title>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    </head>
+    <body>
+        <header>
+            <h1>Welcome to the Todo App</h1>
+        </header>
+        <hr>
+        {% block content %}
+        {% endblock %}
+    </body> 
+</html>

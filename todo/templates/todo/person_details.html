@@ -1,0 +1,15 @@
+{% extends "todo/base.html" %}
+
+{% block title %} {{person.name}}'s Details {% endblock %}
+
+
+    <h1> Hello {{person.name}}</h1>
+
+    <h3> Your Todos </h3>
+    <ul>
+        {% for todo in person.todos.all %}
+            <li><b>{{ todo.id }} {{ todo.title }}</b>- (Done : {{ todo.done }})</li>
+        {% empty %}
+            <li>No todos found.</li>
+        {% endfor %}
+    </ul>
